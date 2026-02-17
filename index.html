@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Landing experimental con HTML5 y canvas interactivo en P5.js.">
+  <meta name="author" content="Jose">
+  <title>Festival Nexo Visual | P5.js + HTML</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="canvas-layer" aria-hidden="true"></div>
+
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <div>
+          <p class="kicker">Evento digital 2026</p>
+          <h1>Festival Nexo Visual</h1>
+        </div>
+      </div>
+      <nav class="main-menu" aria-label="menu principal">
+        <a href="#programa">Programa</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#inscripcion">Inscripcion</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero panel">
+        <div class="hero-copy">
+          <h2>Web tradicional + fondo reactivo en tiempo real</h2>
+          <p>
+            Mueve el raton para alterar el campo de particulas del fondo.
+            El contenido vive sobre el lienzo y se integra como una sola experiencia.
+          </p>
+          <div class="cta-row">
+            <button type="button">Reservar plaza</button>
+            <button type="button" class="ghost">Ver trailer</button>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=80" alt="Escenario con pantallas visuales y publico">
+        </div>
+      </section>
+
+      <section id="programa" class="panel program">
+        <div class="program-item">
+          <h3>10:00</h3>
+          <p>Apertura inmersiva con visuales generativos</p>
+        </div>
+        <div class="program-item">
+          <h3>12:30</h3>
+          <p>Taller de tipografia cinetica para web</p>
+        </div>
+        <div class="program-item">
+          <h3>18:00</h3>
+          <p>Sesion live coding de arte interactivo</p>
+        </div>
+      </section>
+
+      <section id="galeria" class="panel gallery">
+        <article class="tile">
+          <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80" alt="Concierto de luces en auditorio">
+          <div class="tile-body">
+            <h3>Show audiovisual</h3>
+            <p>Mapping sincronizado con sonido envolvente.</p>
+          </div>
+        </article>
+        <article class="tile">
+          <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=900&q=80" alt="Publico en evento nocturno">
+          <div class="tile-body">
+            <h3>Escena principal</h3>
+            <p>Interaccion en directo entre artista y publico.</p>
+          </div>
+        </article>
+        <article class="tile">
+          <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=900&q=80" alt="Pantallas LED en evento tecnologico">
+          <div class="tile-body">
+            <h3>Zona instalaciones</h3>
+            <p>Espacios experimentales con sensores y proyeccion.</p>
+          </div>
+        </article>
+      </section>
+
+      <section id="inscripcion" class="panel form-panel">
+        <h2>Inscripcion</h2>
+        <form>
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="tu@email.com" required>
+          </div>
+          <div class="field">
+            <label for="entrada">Tipo de entrada</label>
+            <select id="entrada" name="entrada">
+              <option>General</option>
+              <option>Workshop Pro</option>
+              <option>VIP</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="3" placeholder="Comentario opcional"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Enviar solicitud</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
